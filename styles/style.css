@@ -1,0 +1,488 @@
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&family=League+Spartan:wght@100..900&family=Lexend:wght@100..900&family=Maven+Pro:wght@400..900&display=swap");
+
+/* Resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+input,
+button {
+  border: none;
+  background: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Utility Classes */
+.container {
+  width: 90%;
+  max-width: 1600px;
+  margin-inline: auto;
+}
+
+.invisible-but-accessible {
+  display: block;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.link {
+  text-decoration: underline;
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  border: 3px solid #262626;
+  border-radius: 10px;
+  padding: 1em 1.7em;
+  background: #262626;
+  color: #fff;
+  font-size: 1.1em;
+  width: fit-content;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.section-padding {
+  padding-block: 5em;
+}
+
+.section-heading {
+  font-size: 3em;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+
+.products-wrapper {
+  display: flex;
+  gap: 2em;
+  margin-bottom: 3em;
+  overflow-x: scroll;
+}
+
+.product-wrap {
+  padding: 1.5em;
+  border-radius: 15px;
+  background-color: #ffffff;
+  min-width: 300px;
+}
+
+.product-wrap a {
+  color: #000;
+}
+
+.product-wrap .btn {
+  color: #fff;
+}
+
+.product-img {
+  display: block;
+  margin-bottom: 1em;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product .product-price {
+  font-size: 1.7em;
+  text-align: right;
+  margin-bottom: 0.5em;
+}
+
+.product .product-name {
+  font-size: 1.6em;
+}
+
+.product .product-description {
+  font-size: 1.1em;
+  margin-block: 1em 1.3em;
+}
+
+.product > .btn {
+  margin-bottom: 1em;
+  text-align: center;
+  padding-block: 0.8em;
+}
+
+.product i {
+  font-size: 1em;
+}
+
+.back-to-top {
+  background-color: #000;
+  padding: 1.5em;
+  color: #fff;
+  border-radius: 30px;
+  position: sticky;
+  left: 90%;
+  top: 90%;
+}
+
+.back-to-top i {
+  vertical-align: middle;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 3px solid black;
+  color: black;
+}
+
+/* Base Styles */
+body {
+  font-family: "Didact Gothic", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f3f3f3;
+  color: #000;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/*------------ Header ------------*/
+/* Header */
+/* #header {
+  position: sticky;
+  top: 0;
+} */
+
+/*--------------- Secondary Nav --------------*/
+#secondary-nav {
+  background-color: #616161;
+  padding-block: 0.3em;
+}
+
+#secondary-nav .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#secondary-nav .social-links {
+  display: flex;
+  gap: 2em;
+}
+
+#secondary-nav .social-link i {
+  font-size: 1.5em;
+}
+
+#secondary-nav .secondary-nav-links {
+  display: flex;
+}
+
+#secondary-nav .secondary-nav-links > *:not(:last-child) {
+  margin-right: 3em;
+}
+
+#secondary-nav .help-link a {
+  color: rgb(230, 95, 95);
+  font-weight: bold;
+}
+
+/*--------------- Search --------------*/
+#search {
+  padding-block: 1em;
+  background-color: #fff;
+}
+
+#search i {
+  font-size: 1.7em;
+}
+
+#search .container {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+#search .search {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5em;
+  width: 100%;
+}
+
+#search .search-bar {
+  width: 50%;
+  /* margin-left: auto; */
+  padding: 0.7em 1.2em;
+  font-size: 1.2em;
+  border-radius: 15px;
+  border: 2px solid #000;
+  font-family: "Maven Pro";
+}
+
+#search .search-icon {
+  display: inline-block;
+}
+
+#search .sign-in-button {
+  margin-left: auto;
+}
+
+#search .search-bar {
+  display: flex;
+}
+
+#search i {
+  margin-bottom: 0.3em;
+}
+
+/*--------------- Primary Nav --------------*/
+#primary-nav {
+  background-color: #262626;
+  padding-block: 1em;
+  font-size: 1.3em;
+}
+
+#primary-nav .primary-nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* overflow-x: scroll;
+  scrollbar-width: thin; */
+}
+
+/* Hero */
+#hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/img/hero-img.avif") no-repeat center center/cover;
+  height: 85vh;
+  color: #fff;
+  text-align: center;
+}
+
+#hero .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 10vh);
+}
+
+#hero .hero-heading {
+  font-size: 3.5em;
+}
+
+#hero .hero-description {
+  font-size: 2.2em;
+  padding-block: 0.4em 1em;
+}
+
+#hero .hero-cta {
+  font-size: 1.2em;
+}
+
+#hero .fa-chevron-down {
+  font-size: 1.1em;
+}
+
+/*--------------- Categories -------------*/
+#categories .categories-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2em;
+  align-items: baseline;
+}
+
+#categories .category-wrap {
+  width: 30%;
+  flex: 1 500px;
+}
+
+#categories .category-bg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1.8em;
+  height: 60vh;
+  width: 100%;
+  border-radius: 1em;
+  color: #fff;
+}
+
+#categories .category-bg.devices {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/hero-img.avif") no-repeat center center/cover;
+}
+
+#categories .category-bg.gadgets {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/gadget-1.jpg") no-repeat center center/cover;
+}
+
+#categories .category-bg.accessories {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/categories-accessories-img.avif") no-repeat center center/cover;
+}
+
+#categories .category-name {
+  font-size: 3em;
+}
+
+#categories .category-description {
+  margin-top: 0.7em;
+  font-size: 1.15em;
+}
+
+/* Summer Sales Banner */
+#summer-sale .summer-banner {
+  width: 100%;
+  height: 40vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/summer-banner-img.jpeg") no-repeat center center/cover;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+#summer-sale .banner-heading {
+  font-size: 4em;
+}
+
+#summer-sale .banner-description {
+  font-size: 2em;
+  padding-block: 1em 1.2em;
+}
+
+#summer-sale .deadline {
+  color: orange;
+  font-size: 1.2em;
+}
+
+/*-------------- Footer --------------*/
+#footer {
+  background-color: #313131;
+  padding-top: 0.5em;
+  padding-bottom: 5em;
+}
+
+#footer .social-links {
+  display: flex;
+  gap: 1em;
+}
+
+#footer .footer-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  font-size: 1.4em;
+  gap: 4em;
+  color: #fff;
+}
+
+#footer .footer-group-heading {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  color: #b6b6b6;
+}
+
+#footer .footer-group-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+#footer .company-description {
+  margin-block: 1em;
+}
+
+#footer .footer-logo {
+  font-size: 2em !important;
+}
+
+#footer input {
+  background-color: #fff;
+  color: #262626;
+  padding: 1em 2em;
+}
+
+#footer button {
+  background-color: #dddddd;
+  color: #4b4b4b;
+  padding: 1em;
+}
+
+#footer .copyright {
+  margin-top: 3.5em;
+  color: #9c9c9c;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1000px) and (min-width: 650px) {
+  .primary-nav-links > *:nth-child(8),
+  .primary-nav-links > *:nth-child(7),
+  .primary-nav-links > *:nth-child(6),
+  .primary-nav-links > *:nth-child(5) {
+    display: none;
+  }
+  .summer-banner {
+    font-size: 0.5em;
+  }
+}
+
+@media only screen and (max-width: 649px) {
+  .primary-nav-links > *:nth-child(8),
+  .primary-nav-links > *:nth-child(7),
+  .primary-nav-links > *:nth-child(6),
+  .primary-nav-links > *:nth-child(5),
+  .primary-nav-links > *:nth-child(4),
+  .primary-nav-links > *:nth-child(3) {
+    display: none;
+  }
+
+  .search-bar {
+    display: none !important;
+  }
+
+  .sign-in-button {
+    margin-left: 0 !important;
+  }
+
+  #secondary-nav {
+    display: none;
+  }
+  .summer-banner {
+    font-size: 0.5em;
+    padding-inline: 2em;
+  }
+
+  .logo-link {
+    margin-right: auto;
+  }
+}
